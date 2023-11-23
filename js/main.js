@@ -19,7 +19,14 @@ botones.forEach(boton => {
             return;
         }
 
-
+        if (boton.id === "igual") {
+            try {
+                pantalla.textContent = eval(pantalla.textContent);
+            } catch {
+                pantalla.textContent = "Error!";
+            }
+            return;
+        }
 
         if (pantalla.textContent === "0" || pantalla.textContent === "Error!") {
             pantalla.textContent = botonApretado;
